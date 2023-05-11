@@ -1,0 +1,14 @@
+<h1>Tic Tac Toe From Memory</h1>
+<p>Test to see if I remember how angular works</p>
+
+<h2>Current player is {{ isCurrentX ? 'X' : 'O'}}</h2>
+<button (click)="newGame()">Start New Game</button>
+<div *ngIf="winner">
+  <h3>Player {{ winner }} wins!</h3>
+</div>
+<div class="board__container">
+  <app-square
+    *ngFor="let square of squares; let i = index"
+    [value]="square"
+    (click)="makeMove(i)"></app-square>
+</div>

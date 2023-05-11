@@ -1,0 +1,21 @@
+.board {
+  &__container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 0px;
+  }
+
+  &__square {
+    background-color: red;
+  }
+}
+
+app-square {
+  border: 1px solid grey;
+  height: 200px;
+}
+
+:host ::ng-deep button {
+  // background-color: teal;
+  // height: 200px;
+}
